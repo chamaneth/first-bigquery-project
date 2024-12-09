@@ -1,1 +1,10 @@
-
+SELECT
+  complaint_description,
+  COUNT(*) AS count
+FROM
+  `bigquery-public-data.austin_311.311_service_requests`
+GROUP BY
+  complaint_description
+ORDER BY
+  count DESC
+LIMIT 80;
